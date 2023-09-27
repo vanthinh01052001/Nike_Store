@@ -1,0 +1,284 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+/*begin Nav */
+nav{
+    background-color: #111;
+    color: #fff;
+    padding: 20px 50px;
+}
+
+/* begin: NavTop */
+.navTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search{
+    display: flex;
+    text-align: center;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.searchInput{
+    border: none;
+    background-color: transparent;
+    /* Chỉ định rằng màu nền phải trong suốt. */
+}
+
+.searchInput::placeholder{
+    color: lightgray;
+}
+
+.limitedOffer{
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+}
+/* End: NavTop */
+
+
+/* begin: NavBottom */
+.navBottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuItem{
+    margin-right: 50px;
+    cursor: pointer;
+    font-weight: 400;
+    color: lightgray;
+}
+/* end: navBottom */
+/* end Nav */
+
+/*begin slider */
+.slider{
+    background-image: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    /* https://bennettfeely.com/clippy/ */
+    overflow: hidden;
+    /* Phần tràn được cắt bớt và phần nội dung còn lại sẽ không hiển thị. */
+}
+
+.sliderWrapper{
+    display: flex;
+    width: 500vw;
+    transition: all 1.5s ease-in-out;
+}
+
+.sliderItem{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sliderBg{
+    /* background-color: yellow; */
+    width: 750px;
+    height: 750px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.sliderImg{
+    z-index: 1;
+}
+
+.sliderTitle{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    z-index: 1;
+}
+
+.sliderPrice{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.buyButton{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    border: 1px solid grey;
+    z-index: 1;
+    background-color: #000;
+    cursor: pointer;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.buyButton:hover{
+    opacity: 1;
+}
+
+.sliderItem:nth-child(1) .sliderBg{
+    background-color: rgb(81, 247, 95);
+}
+
+.sliderItem:nth-child(2) .sliderBg{
+    background-color: rgb(143, 76, 252);
+}
+.sliderItem:nth-child(3) .sliderBg{
+    background-color: rgb(58, 248, 207);
+}
+.sliderItem:nth-child(4) .sliderBg{
+    background-color: rgb(64, 149, 247);
+}
+.sliderItem:nth-child(5) .sliderBg{
+    background-color: rgb(126, 106, 17);
+}
+
+.sliderItem:nth-child(1) .sliderPrice{
+    color: rgb(81, 247, 95);
+    border: 1px solid rgb(81, 247, 95);
+}
+
+.sliderItem:nth-child(2) .sliderPrice{
+    color: rgb(143, 76, 252);
+    border: 1px solid rgb(143, 76, 252);
+}
+.sliderItem:nth-child(3) .sliderPrice{
+    color: rgb(58, 248, 207);
+    border: 1px solid rgb(58, 248, 207);
+}
+.sliderItem:nth-child(4) .sliderPrice{
+    color: rgb(64, 149, 247);
+    border: 1px solid rgb(64, 149, 247);
+}
+.sliderItem:nth-child(5) .sliderPrice{
+    color: rgb(126, 106, 17);
+    border: 1px solid rgb(126, 106, 17);
+}
+/* end slider */
+
+/* begin Features */
+.features{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.featureImg{
+    width: 50px;
+    height: 50px;
+}
+
+.featureTitle{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.featureDesc{
+    color: #ccc;
+    width: 50%;
+    height: 100px;
+}
+/* end Features */
+
+/* begin Product */
+.product{
+    height: 100vh;
+    background-color:whitesmoke;
+    position: relative;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+.productImg{
+    width: 50%;
+}
+
+.productDetails{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px; 
+}
+
+.productTitle{
+    font-size: 75px;
+    font-weight: 900;
+}
+
+.productDesc{
+    font-style: 24px;
+    color: #ccc;
+}
+
+.colors, .sizes{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.color{
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: #000;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.color:last-child{
+    background-color: darkblue;
+}
+
+.size{
+    padding: 5px 20px;
+    border: 1px solid #000;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.productButton{
+    float: right;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+.productButton:hover{
+    opacity: 1;
+}
+/* end Product */
